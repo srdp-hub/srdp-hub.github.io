@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="nl" data-lang="nl">
+<head>
+<meta charset="utf-8">
+<title>Cases — SRDP in de zorg: SEIN, DHD PLUGIN, Intrakoop — SRDP Hub</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Drie zorgcases met de SRDP-aanpak: een soeverein lakehouse bij SEIN, federatief leren over ziekenhuizen heen met DHD PLUGIN, en een federatief datanetwerk voor inkoopcoöperatie Intrakoop.">
+<link rel="canonical" href="https://srdphub.com/cases.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SRDP Hub">
+<meta property="og:title" content="Cases — SRDP bewezen in de zorg">
+<meta property="og:description" content="SEIN, DHD PLUGIN en Intrakoop: soevereine dataplatforms en federatieve datanetwerken op de open SRDP-blauwdruk.">
+<meta property="og:url" content="https://srdphub.com/cases.html">
+<meta property="og:image" content="https://srdphub.com/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mozilla+Headline:wght@400;600;700&amp;family=Mozilla+Text:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/site.css?v=2">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "url": "https://srdphub.com/cases.html",
+  "name": "Cases — SRDP in de zorg",
+  "about": {"@id": "https://srdphub.com/#org"},
+  "inLanguage": ["nl", "en"]
+}
+</script>
+<style>
+  .page-hero { padding-bottom: 64px; }
+  .case { padding: 96px 0; border-top: 2px solid var(--ink); scroll-margin-top: 90px; }
+  .case-head { display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: start; margin-bottom: 48px; }
+  .case-head h2 { font-size: clamp(36px, 4.2vw, 54px); margin: 14px 0 12px; }
+  .case-head .who { font-size: 18px; color: var(--ink-70); max-width: 56ch; margin: 0; }
+  .case-fig {
+    width: 200px; height: 170px;
+    background-color: var(--cyan);
+    -webkit-mask: var(--shape) no-repeat center / contain;
+    mask: var(--shape) no-repeat center / contain;
+  }
+  .case-cols { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 28px; }
+  .case-col { border-top: 3px solid var(--ink); padding-top: 20px; }
+  .case-col .k {
+    display: inline-block;
+    font-family: var(--font-mono); font-size: 12px; letter-spacing: .14em; text-transform: uppercase;
+    background: var(--cyan); color: var(--ink); padding: 3px 9px; margin-bottom: 14px;
+  }
+  .case-col p { margin: 0; font-size: 16.5px; color: var(--ink-70); }
+  .case-meta { margin-top: 40px; font-family: var(--font-mono); font-size: 13px; color: var(--ink-50); }
+
+  .case-alt { background: var(--sand); }
+
+  .cases-cta { text-align: center; padding: 104px 0; }
+  .cases-cta h2 { font-size: clamp(36px, 4.2vw, 54px); max-width: 24ch; margin: 0 auto 18px; }
+  .cases-cta p { font-size: 19px; color: rgba(251,250,246,.75); max-width: 52ch; margin: 0 auto 36px; }
+
+  @media (max-width: 920px) {
+    .case-head { grid-template-columns: 1fr; }
+    .case-cols { grid-template-columns: 1fr; }
+    .case-fig { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main"><span lang="nl">Naar inhoud</span><span lang="en">Skip to content</span></a>
+
+<nav class="nav" data-screen-label="Navigation">
+  <div class="wrap nav-in">
+    <a class="nav-brand" href="index.html">
+      <img src="assets/logo/srdp-hub-tree-ink.png" alt="SRDP Hub">
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="cases.html" aria-current="page">Cases</a>
+      <a href="partners.html">Partners</a>
+      <a href="join.html"><span lang="nl">Doe mee</span><span lang="en">Get involved</span></a>
+      <a href="https://docs.srdphub.com/">Developer docs</a>
+    </div>
+    <a class="nav-gh" href="https://github.com/srdp-hub" aria-label="GitHub" title="GitHub">
+      <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+    </a>
+    <a class="nav-cta" href="contact.html"><span lang="nl">Praat met een partner</span><span lang="en">Talk to a partner</span></a>
+    <div class="lang-toggle" role="group" aria-label="Taal / Language">
+      <button type="button" data-lang="nl" aria-pressed="true">NL</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <button class="nav-burger" type="button" aria-expanded="false" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="nav-menu">
+    <a href="index.html">Home</a>
+    <a href="cases.html" aria-current="page">Cases</a>
+    <a href="partners.html">Partners</a>
+    <a href="join.html"><span lang="nl">Doe mee</span><span lang="en">Get involved</span></a>
+    <a href="https://docs.srdphub.com/">Developer docs</a>
+    <a href="contact.html"><span lang="nl">Praat met een partner →</span><span lang="en">Talk to a partner →</span></a>
+  </div>
+</nav>
+
+<main id="main">
+
+<header class="page-hero" data-screen-label="Cases hero">
+  <div class="wrap">
+    <p class="eyebrow">Cases</p>
+    <h1 lang="nl">Bewezen waar het <span class="mark">moeilijk</span> is: de zorg.</h1>
+    <h1 lang="en">Proven where it's <span class="mark">hard</span>: healthcare.</h1>
+    <p class="sub" lang="nl">In de zorg komen gevoelige data, strenge regels en krappe budgetten samen. Precies daar laat de SRDP-aanpak zien wat openheid en eigenaarschap waard zijn.</p>
+    <p class="sub" lang="en">Healthcare combines sensitive data, strict regulation and tight budgets. Exactly there the SRDP approach shows what openness and ownership are worth.</p>
+    <span class="draft-note" style="margin-top: 28px" lang="nl">Conceptcopy — resultaten en details worden samen met de betrokken organisaties aangescherpt.</span>
+    <span class="draft-note" style="margin-top: 28px" lang="en">Draft copy — results and details to be refined together with the organisations involved.</span>
+  </div>
+</header>
+
+<!-- ===================== SEIN ===================== -->
+<section class="case" id="sein" data-screen-label="Case SEIN">
+  <div class="wrap">
+    <div class="case-head">
+      <div>
+        <span class="tag"><span lang="nl">Epilepsiezorg &amp; onderzoek</span><span lang="en">Epilepsy care &amp; research</span></span>
+        <h2 lang="nl">SEIN: een dataplatform in eigen beheer.</h2>
+        <h2 lang="en">SEIN: a data platform under its own control.</h2>
+        <p class="who" lang="nl">SEIN is hét expertisecentrum voor epilepsie en slaapgeneeskunde in Nederland — met klinieken, poliklinieken en een eigen onderzoekstak.</p>
+        <p class="who" lang="en">SEIN is the Dutch centre of expertise for epilepsy and sleep medicine — with clinics, outpatient locations and its own research arm.</p>
+      </div>
+      <div class="case-fig" aria-hidden="true" style="--shape: url('assets/mozilla/Block_Curve_05_Green.svg')"></div>
+    </div>
+    <div class="case-cols">
+      <div class="case-col">
+        <span class="k"><span lang="nl">Vraag</span><span lang="en">Challenge</span></span>
+        <p lang="nl">Zorg- en onderzoeksdata zat verspreid over systemen die SEIN niet bezat. Onderzoekers wachtten op extracten; elke nieuwe vraag betekende een nieuw traject.</p>
+        <p lang="en">Care and research data sat scattered across systems SEIN did not own. Researchers waited for extracts; every new question meant a new project.</p>
+      </div>
+      <div class="case-col">
+        <span class="k"><span lang="nl">Aanpak</span><span lang="en">Approach</span></span>
+        <p lang="nl">Een lakehouse-dataplatform volgens de SRDP-blauwdruk, opgebouwd uit open-source componenten en neergezet binnen de eigen omgeving van SEIN. Code, data en configuratie blijven in eigen hand.</p>
+        <p lang="en">A lakehouse data platform following the SRDP blueprint, assembled from open-source components and deployed inside SEIN's own environment. Code, data and configuration stay in its own hands.</p>
+      </div>
+      <div class="case-col">
+        <span class="k"><span lang="nl">Resultaat</span><span lang="en">Result</span></span>
+        <p lang="nl">Eén plek waar zorg- en onderzoeksdata samenkomen, herbruikbaar voor nieuwe vragen, zonder licentiekosten per gebruiker en zonder afhankelijkheid van één leverancier.</p>
+        <p lang="en">One place where care and research data come together, reusable for new questions, without per-user licence fees and without dependence on a single vendor.</p>
+      </div>
+    </div>
+    <p class="case-meta" lang="nl">Sector: zorg · Patroon: soeverein lakehouse · Status: in productie</p>
+    <p class="case-meta" lang="en">Sector: healthcare · Pattern: sovereign lakehouse · Status: in production</p>
+  </div>
+</section>
+
+<!-- ===================== DHD / PLUGIN ===================== -->
+<section class="case case-alt" id="dhd" data-screen-label="Case DHD PLUGIN">
+  <div class="wrap">
+    <div class="case-head">
+      <div>
+        <span class="tag"><span lang="nl">Ziekenhuizen · landelijk</span><span lang="en">Hospitals · national</span></span>
+        <h2 lang="nl">DHD · PLUGIN: de analyse reist, de data blijft.</h2>
+        <h2 lang="en">DHD · PLUGIN: the analysis travels, the data stays.</h2>
+        <p class="who" lang="nl">DHD beheert landelijke data van de Nederlandse ziekenhuizen. In het PLUGIN-project wordt analyse over ziekenhuizen heen mogelijk, federatief en zonder centrale databerg.</p>
+        <p class="who" lang="en">DHD manages national data for Dutch hospitals. The PLUGIN project enables analysis across hospitals, federated and without a central data pile.</p>
+      </div>
+      <div class="case-fig" aria-hidden="true" style="--shape: url('assets/mozilla/Block_Squared_01_Green.svg')"></div>
+    </div>
+    <div class="case-cols">
+      <div class="case-col">
+        <span class="k"><span lang="nl">Vraag</span><span lang="en">Challenge</span></span>
+        <p lang="nl">Ziekenhuizen willen samen leren van elkaars data, maar patiëntdata mag en wil niemand zomaar centraal verzamelen.</p>
+        <p lang="en">Hospitals want to learn from each other's data, but nobody can or should simply pool patient data centrally.</p>
+      </div>
+      <div class="case-col">
+        <span class="k"><span lang="nl">Aanpak</span><span lang="en">Approach</span></span>
+        <p lang="nl">Een federatieve infrastructuur op open componenten: het algoritme reist naar het ziekenhuis, rekent daar, en alleen de uitkomsten komen samen. Elke deelnemer draait dezelfde open bouwstenen.</p>
+        <p lang="en">A federated infrastructure on open components: the algorithm travels to the hospital, computes there, and only the outcomes come together. Every participant runs the same open building blocks.</p>
+      </div>
+      <div class="case-col">
+        <span class="k"><span lang="nl">Resultaat</span><span lang="en">Result</span></span>
+        <p lang="nl">Gezamenlijke inzichten over ziekenhuizen heen, terwijl de patiëntdata het eigen huis nooit verlaat. Het model is herhaalbaar voor elke volgende vraag.</p>
+        <p lang="en">Shared insight across hospitals while patient data never leaves its own house. The model is repeatable for every next question.</p>
+      </div>
+    </div>
+    <p class="case-meta" lang="nl">Sector: zorg · Patroon: federatief leren · Status: project</p>
+    <p class="case-meta" lang="en">Sector: healthcare · Pattern: federated learning · Status: project</p>
+  </div>
+</section>
+
+<!-- ===================== INTRAKOOP ===================== -->
+<section class="case" id="intrakoop" data-screen-label="Case Intrakoop">
+  <div class="wrap">
+    <div class="case-head">
+      <div>
+        <span class="tag"><span lang="nl">Zorginkoop · coöperatie</span><span lang="en">Healthcare procurement · cooperative</span></span>
+        <h2 lang="nl">Intrakoop: een federatief netwerk voor de inkoopcoöperatie.</h2>
+        <h2 lang="en">Intrakoop: a federated network for the purchasing cooperative.</h2>
+        <p class="who" lang="nl">Intrakoop is de inkoopcoöperatie van de Nederlandse zorg. Honderden zorgorganisaties bundelen er hun inkoopkracht, en steeds vaker ook hun data.</p>
+        <p class="who" lang="en">Intrakoop is the purchasing cooperative of Dutch healthcare. Hundreds of care organisations pool their purchasing power there, and increasingly their data.</p>
+      </div>
+      <div class="case-fig" aria-hidden="true" style="--shape: url('assets/mozilla/Block_Curve_02_Green.svg')"></div>
+    </div>
+    <div class="case-cols">
+      <div class="case-col">
+        <span class="k"><span lang="nl">Vraag</span><span lang="en">Challenge</span></span>
+        <p lang="nl">Leden willen hun inkoop- en uitgavendata vergelijken en benchmarken, zonder hun bedrijfsgevoelige data af te staan aan één centrale partij.</p>
+        <p lang="en">Members want to compare and benchmark purchasing and spend data, without surrendering commercially sensitive data to one central party.</p>
+      </div>
+      <div class="case-col">
+        <span class="k"><span lang="nl">Aanpak</span><span lang="en">Approach</span></span>
+        <p lang="nl">Een federatief datanetwerk volgens de SRDP-aanpak: elk lid houdt de eigen data in beheer, gedeelde definities en open componenten maken de inzichten vergelijkbaar.</p>
+        <p lang="en">A federated data network following the SRDP approach: each member keeps its own data under management, while shared definitions and open components make the insights comparable.</p>
+      </div>
+      <div class="case-col">
+        <span class="k"><span lang="nl">Resultaat</span><span lang="en">Result</span></span>
+        <p lang="nl">Vergelijkbare inkoopinzichten voor de hele coöperatie, met behoud van eigenaarschap per lid, coöperatief in bestuur én in techniek.</p>
+        <p lang="en">Comparable procurement insight for the whole cooperative, with ownership retained per member, cooperative in governance and in technology.</p>
+      </div>
+    </div>
+    <p class="case-meta" lang="nl">Sector: zorg · Patroon: federatief datanetwerk · Status: in ontwikkeling</p>
+    <p class="case-meta" lang="en">Sector: healthcare · Pattern: federated data network · Status: in development</p>
+  </div>
+</section>
+
+<!-- ===================== CTA ===================== -->
+<section class="sec-ink on-ink cases-cta" data-screen-label="Cases CTA">
+  <div class="wrap">
+    <h2 lang="nl">Herken je je eigen vraagstuk?</h2>
+    <h2 lang="en">Recognise your own challenge?</h2>
+    <p lang="nl">Praat met een partner uit de coöperatie over wat SRDP voor jouw organisatie kan betekenen.</p>
+    <p lang="en">Talk to a partner from the cooperative about what SRDP could mean for your organisation.</p>
+    <a class="btn btn-primary" href="contact.html"><span lang="nl">Praat met een partner</span><span lang="en">Talk to a partner</span></a>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer" data-screen-label="Footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <img class="mark-img" src="assets/logo/srdp-hub-tree-paper.png" alt="SRDP Hub">
+        <p style="max-width: 38ch; margin: 18px 0 0; font-size: 16px" lang="nl">Open, soevereine en flexibele dataplatforms, samen gebouwd en samen bestuurd.</p>
+        <p style="max-width: 38ch; margin: 18px 0 0; font-size: 16px" lang="en">Open, sovereign and flexible data platforms, built and governed in common.</p>
+      </div>
+      <div>
+        <h5>Site</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cases.html">Cases</a></li>
+          <li><a href="partners.html">Partners</a></li>
+          <li><a href="join.html"><span lang="nl">Doe mee</span><span lang="en">Get involved</span></a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5><span lang="nl">Open</span><span lang="en">Open</span></h5>
+        <ul>
+          <li><a href="https://github.com/srdp-hub">GitHub</a></li>
+          <li><a href="https://docs.srdphub.com/">Developer docs</a></li>
+          <li><a href="mailto:hello@srdphub.com">hello@srdphub.com</a></li>
+          <li><a href="https://www.rijksorganisatieodi.nl/rijks-ict-gilde">Rijks ICT Gilde</a></li>
+          <li><a href="https://www.mozillafoundation.org">Mozilla Foundation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <span>© 2026 SRDP Hub <span lang="nl">coöperatie</span><span lang="en">cooperative</span> · srdphub.com</span>
+      <span lang="nl">Visuele identiteit gebouwd met de open brand resources van de <a href="https://www.mozillafoundation.org">Mozilla Foundation</a>.</span>
+      <span lang="en">Visual identity built with the <a href="https://www.mozillafoundation.org">Mozilla Foundation</a>'s open brand resources.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>

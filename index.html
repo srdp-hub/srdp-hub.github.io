@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="nl" data-lang="nl">
+<head>
+<meta charset="utf-8">
+<title>SRDP Hub — Een open-source dataplatform dat je écht bezit</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="SRDP is een open blauwdruk voor soevereine dataplatforms: bewezen open-source componenten, uitgerold en beheerd door coöperatie-partners die elkaar kunnen vervangen. Zonder lock-in en zonder black box.">
+<link rel="canonical" href="https://srdphub.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SRDP Hub">
+<meta property="og:title" content="SRDP Hub — Een dataplatform dat je écht bezit">
+<meta property="og:description" content="Open blauwdruk voor soevereine dataplatforms. Zonder lock-in en zonder black box, beheerd door partners die elkaar kunnen vervangen.">
+<meta property="og:url" content="https://srdphub.com/">
+<meta property="og:image" content="https://srdphub.com/assets/og-image.png">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mozilla+Headline:wght@400;600;700&amp;family=Mozilla+Text:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/site.css?v=2">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://srdphub.com/#org",
+      "name": "SRDP Hub",
+      "legalName": "SRDP Hub coöperatie",
+      "url": "https://srdphub.com/",
+      "logo": "https://srdphub.com/assets/og-image.png",
+      "email": "hello@srdphub.com",
+      "description": "SRDP Hub is een Nederlandse coöperatie van dienstverleners en professionals rond SRDP: een open blauwdruk die bewezen open-source componenten samenvoegt tot een soeverein dataplatform zonder vendor lock-in.",
+      "slogan": "Open. Soeverein. Flexibel.",
+      "areaServed": "NL",
+      "sameAs": ["https://github.com/srdp-hub"],
+      "member": [
+        {"@type": "Organization", "name": "Factful", "url": "https://factful.nl"},
+        {"@type": "Organization", "name": "@kapitan", "url": "https://kapitan.net"},
+        {"@type": "Organization", "name": "KundoLabs", "url": "https://kundolabs.com"},
+        {"@type": "Organization", "name": "Timformatie", "url": "https://timformatie.nl"},
+        {"@type": "Person", "name": "Yannick Vinkesteijn", "url": "https://yannickvinkesteijn.com/", "jobTitle": "Lead developer, DHD"}
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://srdphub.com/#site",
+      "url": "https://srdphub.com/",
+      "name": "SRDP Hub",
+      "publisher": {"@id": "https://srdphub.com/#org"},
+      "inLanguage": ["nl", "en"]
+    }
+  ]
+}
+</script>
+<style>
+  /* ---------- page-specific: hero ---------- */
+  .hero { padding: 96px 0 110px; overflow: hidden; }
+  .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 64px; align-items: center; }
+  .hero h1 { font-size: clamp(52px, 5.8vw, 84px); max-width: 14ch; }
+  .hero .sub { font-size: 22px; line-height: 1.55; color: var(--ink-70); max-width: 54ch; margin: 28px 0 40px; }
+  .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+
+  .hero-fig { position: relative; min-height: 440px; }
+  .hero-blob {
+    position: absolute; inset: 0;
+    background-color: var(--cyan);
+    -webkit-mask: url("assets/mozilla/Block_Curve_01_Green.svg") no-repeat center / contain;
+    mask: url("assets/mozilla/Block_Curve_01_Green.svg") no-repeat center / contain;
+  }
+  .hero-fig .icon {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -52%);
+    height: 54%; width: auto;
+  }
+  .hero-fig .tri {
+    position: absolute; right: -14px; bottom: -26px;
+    width: 90px; height: 110px;
+    background-color: var(--yellow);
+    -webkit-mask: url("assets/mozilla/Block_Triangle_05_Green.svg") no-repeat center / contain;
+    mask: url("assets/mozilla/Block_Triangle_05_Green.svg") no-repeat center / contain;
+  }
+  .hero-scrib {
+    position: absolute; left: -120px; top: 38%;
+    width: 110px; height: 70px;
+    background-color: var(--ink);
+    -webkit-mask: url("assets/mozilla/Scribble_01_Light.svg") no-repeat center / contain;
+    mask: url("assets/mozilla/Scribble_01_Light.svg") no-repeat center / contain;
+  }
+
+  /* ---------- problem ---------- */
+  .problem-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 64px; align-items: start; }
+  .stat-big { font-family: var(--font-display); font-weight: 700; font-size: clamp(96px, 11vw, 160px); line-height: .9; letter-spacing: -0.03em; }
+  .stat-lbl { font-family: var(--font-mono); font-size: 14px; line-height: 1.6; color: var(--ink-70); max-width: 30ch; margin-top: 16px; }
+  .problem-grid .body p { font-size: 20px; line-height: 1.65; margin: 0 0 20px; max-width: 58ch; }
+
+  /* ---------- what is SRDP ---------- */
+  .def-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  .def-grid .card h3 { font-size: 30px; margin: 18px 0 12px; }
+  .def-grid .card h3 .dot { color: var(--blue-deep); }
+  .def-grid .card p { margin: 0; font-size: 17.5px; color: var(--ink-70); }
+  .def-grid .card .more { display: inline-block; margin-top: 20px; font-family: var(--font-mono); font-size: 14px; }
+
+  /* ---------- steps ---------- */
+  .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  .step { border-top: 3px solid var(--ink); padding-top: 22px; }
+  .step .n {
+    font-family: var(--font-display); font-weight: 700; font-size: 22px;
+    display: inline-block; background: var(--cyan);
+    padding: 2px 12px; margin-bottom: 14px;
+  }
+  .step h3 { font-size: 24px; margin: 0 0 10px; }
+  .step p { margin: 0; font-size: 17px; color: var(--ink-70); }
+
+  /* ---------- switch callout (ink) ---------- */
+  .switch-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 64px; align-items: center; }
+  .switch-grid p { font-size: 19px; line-height: 1.65; color: rgba(251,250,246,.78); margin: 0 0 18px; max-width: 56ch; }
+  .switch-fig { position: relative; min-height: 280px; }
+  .switch-fig .loop {
+    position: absolute; inset: 0;
+    background-color: var(--cyan);
+    -webkit-mask: url("assets/mozilla/Scribble_03_Light.svg") no-repeat center / contain;
+    mask: url("assets/mozilla/Scribble_03_Light.svg") no-repeat center / contain;
+  }
+
+  /* ---------- cases teaser ---------- */
+  .cases-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  .cases-grid .card h3 { font-size: 26px; margin: 16px 0 10px; }
+  .cases-grid .card p { margin: 0; font-size: 16.5px; color: var(--ink-70); }
+  .cases-grid .card .go { display: inline-block; margin-top: 20px; font-family: var(--font-mono); font-size: 14px; color: var(--blue-deep); }
+  .sec-head-row { display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+
+  /* ---------- partners band ---------- */
+  .partner-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; margin-top: 8px; }
+  .partner-tile {
+    border: 2px solid var(--ink); border-radius: var(--r-md);
+    min-height: 130px; display: flex; align-items: center; justify-content: center;
+    background: var(--paper); padding: 20px;
+  }
+  .partner-tile img { max-height: 26px; max-width: 75%; object-fit: contain; }
+  .partner-tile .wordmark { font-family: var(--font-display); font-weight: 600; font-size: 24px; letter-spacing: -0.01em; }
+  .partner-tile.is-person { flex-direction: column; gap: 10px; }
+  .partner-tile.is-person .ph { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; object-position: center 28%; max-height: none; max-width: none; border: 2px solid var(--ink); }
+  .partner-tile.is-person .ph.mono { display: flex; align-items: center; justify-content: center; background: var(--cyan); color: var(--ink); font-family: var(--font-display); font-weight: 700; font-size: 18px; }
+  .partner-tile.is-person .nm { font-family: var(--font-display); font-weight: 600; font-size: 14.5px; line-height: 1.12; letter-spacing: -0.01em; text-align: center; }
+  .partner-note { font-family: var(--font-mono); font-size: 13.5px; color: var(--ink-50); margin-top: 24px; }
+
+  /* ---------- final CTA (client-first) ---------- */
+  .cta-main {
+    background: var(--cyan); color: var(--ink);
+    border: 2px solid var(--ink); border-radius: var(--r-md);
+    padding: 48px; display: grid; grid-template-columns: 1.2fr auto; gap: 40px; align-items: center;
+    margin-top: 48px;
+  }
+  .cta-main h3 { font-size: clamp(30px, 3.4vw, 42px); margin: 10px 0 14px; color: var(--ink); }
+  .cta-main p { margin: 0; font-size: 18px; max-width: 52ch; }
+  .cta-k { font-family: var(--font-mono); font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-70); }
+  .cta-quiet {
+    margin-top: 36px;
+    display: flex; gap: 56px; flex-wrap: wrap;
+    font-size: 16.5px; color: rgba(251,250,246,.7);
+  }
+  .cta-quiet a { color: var(--paper); }
+  .cta-quiet a:hover { color: var(--cyan); }
+
+  @media (max-width: 920px) {
+    .hero-grid, .problem-grid, .def-grid, .switch-grid, .cases-grid { grid-template-columns: 1fr; }
+    .steps-grid { grid-template-columns: 1fr; }
+    .partner-grid { grid-template-columns: 1fr 1fr; }
+    .cta-main { grid-template-columns: 1fr; }
+    .hero-fig { min-height: 320px; }
+    .hero-scrib { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main"><span lang="nl">Naar inhoud</span><span lang="en">Skip to content</span></a>
+
+<!-- ===================== NAV ===================== -->
+<nav class="nav" data-screen-label="Navigation">
+  <div class="wrap nav-in">
+    <a class="nav-brand" href="index.html">
+      <img src="assets/logo/srdp-hub-tree-ink.png" alt="SRDP Hub">
+    </a>
+    <div class="nav-links">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="cases.html">Cases</a>
+      <a href="partners.html">Partners</a>
+      <a href="join.html"><span lang="nl">Doe mee</span><span lang="en">Get involved</span></a>
+      <a href="https://docs.srdphub.com/">Developer docs</a>
+    </div>
+    <a class="nav-gh" href="https://github.com/srdp-hub" aria-label="GitHub" title="GitHub">
+      <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+    </a>
+    <a class="nav-cta" href="contact.html"><span lang="nl">Praat met een partner</span><span lang="en">Talk to a partner</span></a>
+    <div class="lang-toggle" role="group" aria-label="Taal / Language">
+      <button type="button" data-lang="nl" aria-pressed="true">NL</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <button class="nav-burger" type="button" aria-expanded="false" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="nav-menu">
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="cases.html">Cases</a>
+    <a href="partners.html">Partners</a>
+    <a href="join.html"><span lang="nl">Doe mee</span><span lang="en">Get involved</span></a>
+    <a href="https://docs.srdphub.com/">Developer docs</a>
+    <a href="contact.html"><span lang="nl">Praat met een partner →</span><span lang="en">Talk to a partner →</span></a>
+  </div>
+</nav>
+
+<main id="main">
+
+<!-- ===================== HERO ===================== -->
+<header class="hero" data-screen-label="Hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow"><span lang="nl">Coöperatie voor soevereine dataplatforms</span><span lang="en">The cooperative for sovereign data platforms</span></p>
+      <h1 lang="nl">Een dataplatform dat je <span class="mark">écht bezit</span>.</h1>
+      <h1 lang="en">A data platform you <span class="mark">actually own</span>.</h1>
+      <p class="sub" lang="nl">SRDP is een open blauwdruk die bewezen open-source componenten samenvoegt tot een volwaardig dataplatform. Partners uit de coöperatie rollen het uit en beheren het, en kunnen elkaar daarbij vervangen. Zonder lock-in en zonder black box.</p>
+      <p class="sub" lang="en">SRDP is an open blueprint that assembles proven open-source components into a full data platform. Partners from the cooperative deploy and operate it, and can take over from one another. Without lock-in and without black boxes.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="contact.html"><span lang="nl">Praat met een partner</span><span lang="en">Talk to a partner</span></a>
+        <a class="btn btn-ghost" href="https://github.com/srdp-hub"><span lang="nl">Bekijk de blauwdruk</span><span lang="en">View the blueprint</span></a>
+      </div>
+    </div>
+    <div class="hero-fig" aria-hidden="true">
+      <span class="hero-scrib"></span>
+      <div class="hero-blob"></div>
+      <img class="icon" src="assets/logo/icon-allink.png" alt="">
+      <span class="tri"></span>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== TICKER ===================== -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-in" lang="nl">
+    <span>Open <span class="dot">·</span> Soeverein <span class="dot">·</span> Flexibel <span class="dot">·</span> Open <span class="dot">·</span> Soeverein <span class="dot">·</span> Flexibel <span class="dot">·</span> Open <span class="dot">·</span> Soeverein <span class="dot">·</span> Flexibel</span>
+  </div>
+  <div class="ticker-in" lang="en">
+    <span>Open <span class="dot">·</span> Sovereign <span class="dot">·</span> Flexible <span class="dot">·</span> Open <span class="dot">·</span> Sovereign <span class="dot">·</span> Flexible <span class="dot">·</span> Open <span class="dot">·</span> Sovereign <span class="dot">·</span> Flexible</span>
+  </div>
+</div>
+
+<!-- ===================== PROBLEM ===================== -->
+<section class="sec sec-sand" data-screen-label="Why SRDP">
+  <div class="wrap">
+    <div class="problem-grid">
+      <div>
+        <div class="stat-big">2%</div>
+        <p class="stat-lbl" lang="nl">van de omzet zien wij organisaties besteden aan data-infrastructuur die ze niet bezitten.</p>
+        <p class="stat-lbl" lang="en">of revenue is what we see organisations spend on data infrastructure they don't own.</p>
+      </div>
+      <div class="body">
+        <p class="eyebrow"><span lang="nl">Waarom SRDP</span><span lang="en">Why SRDP</span></p>
+        <h2 lang="nl">Data-infrastructuur werd een black box met een prijskaartje.</h2>
+        <h2 lang="en">Data infrastructure became a black box with a price tag.</h2>
+        <p lang="nl">Vrijwel elk commercieel dataplatform draait vanbinnen op dezelfde volwassen open-source componenten. Toch betalen publieke en non-profitorganisaties er jaar na jaar licenties voor, zonder eigenaarschap en zonder vertrekoptie.</p>
+        <p lang="en">Nearly every commercial data platform runs on the same mature open-source components inside. Yet public and non-profit organisations pay licence fees for them year after year, without ownership and without an exit.</p>
+        <p lang="nl">SRDP keert dat om: dezelfde componenten, open samengevoegd tot één herhaalbare blauwdruk. Er zit <strong>geen poortwachter</strong> meer tussen.</p>
+        <p lang="en">SRDP turns that around: the same components, openly assembled into one repeatable blueprint. There is <strong>no gatekeeper</strong> in between.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHAT IS SRDP ===================== -->
+<section class="sec" data-screen-label="What is SRDP">
+  <div class="wrap">
+    <p class="eyebrow"><span lang="nl">Wat is SRDP</span><span lang="en">What is SRDP</span></p>
+    <h2 lang="nl">Eén standaard, gedragen door een coöperatie.</h2>
+    <h2 lang="en">One standard, carried by a cooperative.</h2>
+    <p class="sub" lang="nl">SRDP bestaat uit een blauwdruk die de strategie omzet in werkende software, en een coöperatie die het vertrouwen draagt.</p>
+    <p class="sub" lang="en">SRDP consists of a blueprint that turns strategy into working software, and a cooperative that carries the trust.</p>
+    <div class="def-grid">
+      <div class="card card-hard">
+        <span class="tag"><span lang="nl">De blauwdruk</span><span lang="en">The blueprint</span></span>
+        <h3>SRDP<span class="dot">.</span></h3>
+        <p lang="nl">Een open specificatie voor het samenstellen van volwassen open-source componenten tot een werkend lakehouse-dataplatform, verpakt, uitgerold en beheerd via één eenvoudige en herhaalbare aanpak.</p>
+        <p lang="en">An open specification for assembling mature open-source components into a working lakehouse data platform, packaged, deployed and operated through one simple and repeatable approach.</p>
+        <a class="more" href="https://github.com/srdp-hub"><span lang="nl">Open op GitHub →</span><span lang="en">Open on GitHub →</span></a>
+      </div>
+      <div class="card card-hard">
+        <span class="tag"><span lang="nl">De coöperatie</span><span lang="en">The cooperative</span></span>
+        <h3>SRDP Hub<span class="dot">.</span></h3>
+        <p lang="nl">Een coöperatie van gelijkgestemde professionals en leveranciers. Samen dekken zij het volledige dienstenpalet om een dataplatform te bouwen en te beheren, en staan ze garant voor elkaars werk.</p>
+        <p lang="en">A cooperative of like-minded professionals and suppliers. Together they cover the full range of services to build and operate a data platform, and they vouch for each other's work.</p>
+        <a class="more" href="partners.html"><span lang="nl">Ontmoet de partners →</span><span lang="en">Meet the partners →</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== HOW IT WORKS ===================== -->
+<section class="sec sec-sand" data-screen-label="How it works">
+  <div class="wrap">
+    <p class="eyebrow"><span lang="nl">Hoe het werkt</span><span lang="en">How it works</span></p>
+    <h2 lang="nl">Van keuze tot eigenaarschap in drie stappen.</h2>
+    <h2 lang="en">From choice to ownership in three steps.</h2>
+    <div class="steps-grid" style="margin-top: 48px">
+      <div class="step">
+        <span class="n">01</span>
+        <h3 lang="nl">Kies een partner</h3>
+        <h3 lang="en">Pick a partner</h3>
+        <p lang="nl">Elke partner in de coöperatie kan SRDP leveren als beheerde dienst. Je kiest de partner die het best bij je organisatie past.</p>
+        <p lang="en">Every partner in the cooperative can deliver SRDP as a managed service. You choose the partner that fits your organisation best.</p>
+      </div>
+      <div class="step">
+        <span class="n">02</span>
+        <h3 lang="nl">Rol de blauwdruk uit</h3>
+        <h3 lang="en">Deploy the blueprint</h3>
+        <p lang="nl">De partner zet het platform neer volgens de open specificatie, op jouw eigen cloud, in je datacenter of bij een soevereine host.</p>
+        <p lang="en">The partner stands up the platform to the open specification, on your cloud, in your data centre or at a sovereign host.</p>
+      </div>
+      <div class="step">
+        <span class="n">03</span>
+        <h3 lang="nl">Het platform is van jou</h3>
+        <h3 lang="en">The platform is yours</h3>
+        <p lang="nl">Code, data en configuratie zijn van jou. Het beheer beleg je waar je wilt en verleg je wanneer je wilt.</p>
+        <p lang="en">Code, data and configuration are yours. You place operations where you want and move them whenever you want.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SWITCH CALLOUT ===================== -->
+<section class="sec sec-ink on-ink" data-screen-label="Switchability">
+  <div class="wrap switch-grid">
+    <div>
+      <p class="eyebrow"><span lang="nl">Soevereiniteit, praktisch gemaakt</span><span lang="en">Sovereignty, made practical</span></p>
+      <h2 lang="nl">Van partner wisselen zonder <span class="mark">migratie</span>.</h2>
+      <h2 lang="en">Switch partners without <span class="mark">migrating</span>.</h2>
+      <p lang="nl">Omdat elke partner op dezelfde open blauwdruk bouwt, kan een andere partner het beheer overnemen. Ben je niet tevreden over je leverancier, dan stap je over zonder migratie en zonder herbouw.</p>
+      <p lang="en">Because every partner builds on the same open blueprint, another partner can take over operations. If your provider underperforms, you switch without migration or rebuild.</p>
+      <p lang="nl">Zo verdwijnt lock-in op elke laag: software, data én dienstverlening.</p>
+      <p lang="en">Lock-in drops away at every layer: software, data and services.</p>
+    </div>
+    <div class="switch-fig" aria-hidden="true">
+      <span class="loop"></span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CASES TEASER ===================== -->
+<section class="sec" data-screen-label="Cases">
+  <div class="wrap">
+    <div class="sec-head-row">
+      <div>
+        <p class="eyebrow">Cases</p>
+        <h2 lang="nl">Bewezen in de zorg.</h2>
+        <h2 lang="en">Proven in healthcare.</h2>
+      </div>
+      <a class="btn btn-ghost" href="cases.html"><span lang="nl">Alle cases</span><span lang="en">All cases</span></a>
+    </div>
+    <div class="cases-grid" style="margin-top: 48px">
+      <a class="card" href="cases.html#sein">
+        <span class="tag"><span lang="nl">Epilepsiezorg</span><span lang="en">Epilepsy care</span></span>
+        <h3>SEIN</h3>
+        <p lang="nl">Een soeverein dataplatform voor zorg en onderzoek, met onderzoeksdata in eigen beheer.</p>
+        <p lang="en">A sovereign data platform for care and research, with research data under SEIN's own control.</p>
+        <span class="go"><span lang="nl">Lees de case →</span><span lang="en">Read the case →</span></span>
+      </a>
+      <a class="card" href="cases.html#dhd">
+        <span class="tag"><span lang="nl">Ziekenhuizen</span><span lang="en">Hospitals</span></span>
+        <h3>DHD · PLUGIN</h3>
+        <p lang="nl">Federatief analyseren over ziekenhuizen heen: de inzichten reizen, de patiëntdata blijft in huis.</p>
+        <p lang="en">Federated analysis across hospitals: the insights travel, the patient data stays home.</p>
+        <span class="go"><span lang="nl">Lees de case →</span><span lang="en">Read the case →</span></span>
+      </a>
+      <a class="card" href="cases.html#intrakoop">
+        <span class="tag"><span lang="nl">Zorginkoop</span><span lang="en">Healthcare procurement</span></span>
+        <h3>Intrakoop</h3>
+        <p lang="nl">Een federatief datanetwerk voor de inkoopcoöperatie van de zorg, met gedeelde inzichten zonder centrale databerg.</p>
+        <p lang="en">A federated data network for healthcare's purchasing cooperative: shared insight without a central data pile.</p>
+        <span class="go"><span lang="nl">Lees de case →</span><span lang="en">Read the case →</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PARTNERS BAND ===================== -->
+<section class="sec sec-sand" data-screen-label="Partners">
+  <div class="wrap">
+    <div class="sec-head-row">
+      <div>
+        <p class="eyebrow">Partners</p>
+        <h2 lang="nl">Gebouwd en beheerd door partners die elkaar kunnen vervangen.</h2>
+        <h2 lang="en">Built and run by partners who can replace each other.</h2>
+      </div>
+      <a class="btn btn-ghost" href="partners.html"><span lang="nl">Over de partners</span><span lang="en">About the partners</span></a>
+    </div>
+    <div class="partner-grid" style="margin-top: 48px">
+      <div class="partner-tile"><span class="wordmark">Factful</span></div>
+      <div class="partner-tile"><span class="wordmark">@kapitan</span></div>
+      <div class="partner-tile"><span class="wordmark">KundoLabs</span></div>
+      <div class="partner-tile"><img src="assets/partners/timformatie-ink.png" alt="Timformatie"></div>
+      <div class="partner-tile is-person">
+        <img class="ph" src="https://yannickvinkesteijn.com/images/yannick_new-min.png" alt="Yannick Vinkesteijn" onerror="this.onerror=null;this.outerHTML='<span class=&quot;ph mono&quot;>YV</span>'">
+        <span class="nm">Yannick<br>Vinkesteijn</span>
+      </div>
+    </div>
+    <p class="partner-note" lang="nl">SRDP is een standaard; partners implementeren en beheren hem.</p>
+    <p class="partner-note" lang="en">SRDP is a standard; partners implement and operate it.</p>
+  </div>
+</section>
+
+<!-- ===================== FINAL CTA ===================== -->
+<section class="sec sec-ink on-ink" data-screen-label="Final CTA">
+  <div class="wrap">
+    <p class="eyebrow"><span lang="nl">Voor organisaties</span><span lang="en">For organisations</span></p>
+    <h2 lang="nl">Klaar voor een dataplatform in eigen hand?</h2>
+    <h2 lang="en">Ready for a data platform of your own?</h2>
+    <div class="cta-main">
+      <div>
+        <span class="cta-k"><span lang="nl">SRDP als jouw dataplatform</span><span lang="en">SRDP as your data platform</span></span>
+        <h3 lang="nl">Praat met een partner uit de coöperatie.</h3>
+        <h3 lang="en">Talk to a partner from the cooperative.</h3>
+        <p lang="nl">Een soeverein platform dat je volledig bezit en dat een partner uit de coöperatie voor je beheert. Wisselen van partner kan altijd, zonder van platform te wisselen.</p>
+        <p lang="en">A sovereign platform you own outright, run for you by a partner from the cooperative. You can always change partners without changing platforms.</p>
+      </div>
+      <a class="btn" style="background: var(--ink); color: var(--paper); border-color: var(--ink)" href="contact.html"><span lang="nl">Neem contact op</span><span lang="en">Get in touch</span></a>
+    </div>
+    <div class="cta-quiet">
+      <span lang="nl">Zelfstandig professional? <a href="join.html#consultant">Bouw mee aan SRDP →</a></span>
+      <span lang="en">Independent professional? <a href="join.html#consultant">Help build SRDP →</a></span>
+      <span lang="nl">Dienstverlener? <a href="join.html#msp">Word SRDP-partner →</a></span>
+      <span lang="en">Service provider? <a href="join.html#msp">Become an SRDP partner →</a></span>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer" data-screen-label="Footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <img class="mark-img" src="assets/logo/srdp-hub-tree-paper.png" alt="SRDP Hub">
+        <p style="max-width: 38ch; margin: 18px 0 0; font-size: 16px" lang="nl">Open, soevereine en flexibele dataplatforms, samen gebouwd en samen bestuurd.</p>
+        <p style="max-width: 38ch; margin: 18px 0 0; font-size: 16px" lang="en">Open, sovereign and flexible data platforms, built and governed in common.</p>
+      </div>
+      <div>
+        <h5>Site</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cases.html">Cases</a></li>
+          <li><a href="partners.html">Partners</a></li>
+          <li><a href="join.html"><span lang="nl">Doe mee</span><span lang="en">Get involved</span></a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5><span lang="nl">Open</span><span lang="en">Open</span></h5>
+        <ul>
+          <li><a href="https://github.com/srdp-hub">GitHub</a></li>
+          <li><a href="https://docs.srdphub.com/">Developer docs</a></li>
+          <li><a href="mailto:hello@srdphub.com">hello@srdphub.com</a></li>
+          <li><a href="https://www.rijksorganisatieodi.nl/rijks-ict-gilde">Rijks ICT Gilde</a></li>
+          <li><a href="https://www.mozillafoundation.org">Mozilla Foundation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <span>© 2026 SRDP Hub <span lang="nl">coöperatie</span><span lang="en">cooperative</span> · srdphub.com</span>
+      <span lang="nl">Visuele identiteit gebouwd met de open brand resources van de <a href="https://www.mozillafoundation.org">Mozilla Foundation</a>.</span>
+      <span lang="en">Visual identity built with the <a href="https://www.mozillafoundation.org">Mozilla Foundation</a>'s open brand resources.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>

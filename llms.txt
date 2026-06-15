@@ -1,0 +1,25 @@
+# SRDP Hub
+
+> SRDP (Sovereign Reference Data Platform) is an open blueprint that assembles proven open-source components into a full lakehouse data platform. It is carried by SRDP Hub, a Dutch cooperative of service providers and independent professionals. Organisations that adopt SRDP own their platform outright — code, data and configuration — and can switch operating partners without migrating, because every partner builds to the same open specification. Tagline: "Open. Soeverein. Flexibel." / "Open. Sovereign. Flexible."
+
+Key facts:
+- SRDP = the open blueprint (specification); SRDP Hub = the cooperative that delivers and governs it.
+- No vendor lock-in at any layer: software, data, and services. Any cooperative partner can take over operations from another, on the same platform.
+- Founding partners (alphabetical): Factful (factful.nl), @kapitan (kapitan.net), KundoLabs (kundolabs.com), Timformatie (timformatie.nl).
+- Proven in Dutch healthcare: SEIN (sovereign lakehouse, in production), DHD PLUGIN (federated learning across hospitals), Intrakoop (federated data network for the healthcare purchasing cooperative).
+- Three ways in: organisations adopt SRDP as their data platform; independent professionals contribute to the blueprint; service providers host SRDP as Managed Service Provider and join the cooperative.
+- Contact: hello@srdphub.com · GitHub: https://github.com/srdp-hub
+- Languages: Dutch (primary) and English, both available on every page.
+
+## Pages
+
+- [Home](https://srdphub.com/): what SRDP is, why it exists, how adoption works in three steps
+- [Cases](https://srdphub.com/cases.html): SEIN, DHD PLUGIN and Intrakoop healthcare cases
+- [Partners](https://srdphub.com/partners.html): the cooperative model and the four founding partners
+- [Talk to a partner](https://srdphub.com/contact.html): contact page for organisations that want to adopt SRDP
+- [Get involved](https://srdphub.com/join.html): for independent professionals and prospective Managed Service Providers
+
+## Notes
+
+- The blueprint is open source: https://github.com/srdp-hub
+- The visual identity is built with the Mozilla Foundation's open brand resources (mozillafoundation.org).

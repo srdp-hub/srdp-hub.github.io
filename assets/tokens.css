@@ -1,0 +1,110 @@
+/* SRDP design tokens — FINAL v1.0 (June 2026)
+   Single source of truth for colours, type, spacing.
+
+   Identity locked to the final logo (Logo Exploration v3, row 5):
+   the branching-nodes icon + "SRDP" in Mozilla Headline Bold,
+   ink #161616 (Mozilla Black), nodes in primary cyan #7DEDF6.
+
+   All accent colours come from the official Mozilla Foundation
+   palette (uploads/MozillaFoundation_Colors_RGB.ase) — see
+   assets/mozilla-foundation-colors.md for the full ramps and
+   which swatches were chosen.
+
+   Credits: colour palette & motifs from the Mozilla Foundation's
+   open brand resources · tree icon "tree" by zainul arifin,
+   the Noun Project (noun-tree-3682101). */
+
+:root {
+  /* === Core — from the logo === */
+  --ink:        #161616;   /* Mozilla Black — text, dark surfaces */
+  --ink-90:     #161616e6;
+  --ink-70:     #161616b3;
+  --ink-50:     #16161680;
+  --ink-30:     #1616164d;
+  --ink-15:     #16161626;
+  --ink-08:     #16161614;
+  --black:      #000000;
+
+  --paper:      #FBFAF6;   /* warm near-white — default background (logo background) */
+  --sand:       #F1ECE1;   /* warm light surface — cards, rows */
+  --sand-deep:  #E6DECF;   /* deeper sand — borders, dividers on paper */
+  --white:      #FFFFFF;
+
+  /* Mozilla Foundation neutrals (Grays ramp) — UI chrome on neutral surfaces */
+  --gray-1:     #F7F7F7;
+  --gray-2:     #DCDCDC;
+  --gray-5:     #878787;
+
+  /* === PRIMARY accent — the logo cyan (Blues ramp, step 3) === */
+  --cyan:       #7DEDF6;   /* node cyan — highlights, marker, surfaces. NOT for text. */
+  --cyan-tint:  #C3F7FA;   /* lightest cyan — tinted panels, table rows */
+  --blue:       #23A5E9;   /* Foundation Blue — charts, secondary emphasis */
+  --blue-deep:  #006BD4;   /* text-safe companion (same Blues ramp) — links, buttons, icons on light */
+
+  /* === Secondary accents — Mozilla Foundation core swatches.
+         One accent at a time; cyan leads. === */
+  --orange:      #F06C13;  /* Foundation Orange — emphasis, alerts */
+  --orange-deep: #B92D05;  /* text-safe orange — error text on light */
+  --yellow:      #EED800;  /* Foundation Yellow — highlights, charts */
+  --green:       #20C376;  /* Foundation Green — success, charts */
+  --green-deep:  #00833D;  /* text-safe green */
+
+  /* Legacy aliases (v0.2 markup compatibility) */
+  --red:        #EA3E00;   /* maps to the Oranges ramp — there is no red in the Foundation palette */
+  --red-deep:   #B92D05;
+
+  /* === Functional === */
+  --success: #00833D;
+  --warning: #EE8900;
+  --error:   #B92D05;
+  --info:    #006BD4;
+
+  /* === Type — the logo letterform family === */
+  --font-display: 'Mozilla Headline', 'Helvetica Neue', Arial, sans-serif;
+  --font-body:    'Mozilla Text', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono:    'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace;
+
+  /* === Spacing (8px base) === */
+  --s-1: 4px; --s0: 8px; --s1: 16px; --s2: 24px; --s3: 32px;
+  --s4: 48px; --s5: 64px; --s6: 96px; --s7: 128px; --s8: 192px;
+
+  /* === Radius — tight & rectilinear (blocks, not blobs) === */
+  --r-sm: 2px; --r-md: 4px; --r-lg: 8px; --r-xl: 12px;
+
+  /* === Soft shadows (data UI only — brand materials use the hard shadows below) === */
+  --shadow-sm: 0 1px 2px rgba(22,22,22,.06), 0 1px 1px rgba(22,22,22,.04);
+  --shadow-md: 0 8px 24px rgba(22,22,22,.08), 0 2px 6px rgba(22,22,22,.05);
+  --shadow-lg: 0 24px 64px rgba(22,22,22,.14), 0 4px 12px rgba(22,22,22,.07);
+
+  /* === Expressive layer — recoloured to the primary cyan ===
+     Marker highlights behind key words, hard offset shadows on cards,
+     2px ink borders. Motifs (scribbles & block shapes) in assets/mozilla/
+     applied as CSS masks so they recolour:
+       -webkit-mask: url(...) no-repeat center / contain; background: var(--cyan); */
+  --hl: var(--cyan);                     /* marker highlight: background --hl, ink text */
+  --shadow-hard: 8px 8px 0 var(--cyan);  /* hard offset shadow for feature cards */
+  --shadow-hard-sm: 5px 5px 0 var(--cyan); /* hover shadow for buttons */
+  --border-bold: 2px solid var(--ink);   /* default border for cards, nav, forms */
+
+  /* === Web building blocks (for srdphub.com) === */
+  --link: var(--blue-deep);
+  --btn-bg: var(--ink);  --btn-fg: var(--paper);   /* primary button */
+  --btn-accent-bg: var(--cyan); --btn-accent-fg: var(--ink); /* accent button */
+  --focus-ring: 2px solid var(--blue-deep);
+}
+
+/* Marker highlight — cyan box behind a word, ink text */
+.mark {
+  background: var(--hl);
+  color: var(--ink);
+  padding: 0 .12em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+/* Base resets / defaults */
+html { font-family: var(--font-body); color: var(--ink); background: var(--paper); }
+body { margin: 0; font-family: var(--font-body); font-size: 17px; line-height: 1.6; color: var(--ink); background: var(--paper); -webkit-font-smoothing: antialiased; }
+h1,h2,h3,h4 { font-family: var(--font-display); font-weight: 700; color: var(--ink); margin: 0; letter-spacing: -0.01em; line-height: 1.05; }
+code, pre, .mono { font-family: var(--font-mono); font-feature-settings: "zero" 1, "ss01" 1; }
+a { color: var(--link); }
