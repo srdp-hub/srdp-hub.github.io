@@ -11,9 +11,18 @@
     if (persist) { try { localStorage.setItem(KEY, lang); } catch (e) {} }
   }
 
-  var saved = null;
-  try { saved = localStorage.getItem(KEY); } catch (e) {}
-  setLang(saved === 'en' ? 'en' : 'nl', false);
+  function detectLang() {
+    var saved = null;
+    try { saved = localStorage.getItem(KEY); } catch (e) {}
+    if (saved === 'en' || saved === 'nl') return saved; /* explicit choice wins */
+    /* No stored preference: Dutch browser -> nl, anything else -> en */
+    var langs = (navigator.languages && navigator.languages.length)
+      ? navigator.languages
+      : [navigator.language || navigator.userLanguage || ''];
+    return langs.some(function (l) { return /^nl/i.test(l); }) ? 'nl' : 'en';
+  }
+
+  setLang(detectLang(), false);
 
   document.addEventListener('click', function (ev) {
     var btn = ev.target.closest('.lang-toggle button');
