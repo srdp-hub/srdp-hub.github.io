@@ -97,6 +97,7 @@
   .problem-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 64px; align-items: start; }
   .stat-big { font-family: var(--font-display); font-weight: 700; font-size: clamp(96px, 11vw, 160px); line-height: .9; letter-spacing: -0.03em; }
   .stat-lbl { font-family: var(--font-mono); font-size: 14px; line-height: 1.6; color: var(--ink-70); max-width: 30ch; margin-top: 16px; }
+  .stat-src { display: inline-block; margin-top: 12px; font-family: var(--font-mono); font-size: 13px; color: var(--blue-deep); text-decoration: underline; text-underline-offset: 2px; }
   .problem-grid .body p { font-size: 20px; line-height: 1.65; margin: 0 0 20px; max-width: 58ch; }
 
   /* ---------- what is SRDP ---------- */
@@ -129,7 +130,7 @@
   }
 
   /* ---------- cases teaser ---------- */
-  .cases-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  .cases-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; }
   .cases-grid .card h3 { font-size: 26px; margin: 16px 0 10px; }
   .cases-grid .card p { margin: 0; font-size: 16.5px; color: var(--ink-70); }
   .cases-grid .card .go { display: inline-block; margin-top: 20px; font-family: var(--font-mono); font-size: 14px; color: var(--blue-deep); }
@@ -258,6 +259,10 @@
         <div class="stat-big">2%</div>
         <p class="stat-lbl" lang="nl">van de omzet zien wij organisaties besteden aan data-infrastructuur die ze niet bezitten.</p>
         <p class="stat-lbl" lang="en">of revenue is what we see organisations spend on data infrastructure they don't own.</p>
+        <div class="stat-big" style="margin-top: 56px">35–65%</div>
+        <p class="stat-lbl" lang="nl">van het IT-budget gaat op aan data-integratie — werk dat je met één open, herbruikbare blauwdruk grotendeels terugwint.</p>
+        <p class="stat-lbl" lang="en">of the IT budget is consumed by data integration — work you largely reclaim with one open, reusable blueprint.</p>
+        <a class="stat-src" href="https://datacentricmanifesto.org/principles/" target="_blank" rel="noopener"><span lang="nl">Bron: Data-Centric Manifesto ↗</span><span lang="en">Source: Data-Centric Manifesto ↗</span></a>
       </div>
       <div class="body">
         <p class="eyebrow"><span lang="nl">Waarom SRDP</span><span lang="en">Why SRDP</span></p>
@@ -366,13 +371,6 @@
         <h3>SEIN</h3>
         <p lang="nl">Een soeverein dataplatform voor zorg en onderzoek, met onderzoeksdata in eigen beheer.</p>
         <p lang="en">A sovereign data platform for care and research, with research data under SEIN's own control.</p>
-        <span class="go"><span lang="nl">Lees de case →</span><span lang="en">Read the case →</span></span>
-      </a>
-      <a class="card" href="cases.html#dhd">
-        <span class="tag"><span lang="nl">Ziekenhuizen</span><span lang="en">Hospitals</span></span>
-        <h3>DHD · PLUGIN</h3>
-        <p lang="nl">Federatief analyseren over ziekenhuizen heen: de inzichten reizen, de patiëntdata blijft in huis.</p>
-        <p lang="en">Federated analysis across hospitals: the insights travel, the patient data stays home.</p>
         <span class="go"><span lang="nl">Lees de case →</span><span lang="en">Read the case →</span></span>
       </a>
       <a class="card" href="cases.html#intrakoop">

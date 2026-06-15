@@ -12,7 +12,7 @@ there (A/AAAA for apex + optional `www` CNAME).
 | File | Purpose |
 |---|---|
 | `index.html` | Home — hero, problem, what-is-SRDP, 3 steps, switchability, cases, partners band, client-first CTA |
-| `cases.html` | SEIN (`#sein`), DHD PLUGIN (`#dhd`), Intrakoop (`#intrakoop`) |
+| `cases.html` | SEIN (`#sein`), Intrakoop (`#intrakoop`) — DHD PLUGIN temporarily archived in `_archive/dhd-plugin-case.html` |
 | `partners.html` | Cooperative model, four founding-partner profiles **with links**, "Same direction" (Rijks ICT Gilde + Mozilla — moved here from the homepage) |
 | `contact.html` | **For organisations** — the prominent CTA target ("Praat met een partner"), single form + what-happens-next |
 | `join.html` | For professionals (`#consultant`) and MSPs (`#msp`) — quieter, two forms |
