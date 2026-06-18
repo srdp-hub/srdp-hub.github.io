@@ -367,6 +367,11 @@ a.card:hover { transform: translate(-4px, -4px); box-shadow: var(--shadow-hard);
   .nav-menu a { padding: 16px 24px; }
   .nav-gh { display: none; }
 }
-@media (max-width: 540px) {
+@media (max-width: 640px) {
+  .wrap { padding: 0 20px; }
+  .ticker-in { padding-left: 20px; }
   .nav-cta { display: none; }
+  .nav-in { gap: 12px; height: 64px; }
+  .nav-brand img { height: 24px; }
+  .lang-toggle button { padding: 6px 9px; font-size: 12px; }
 }
