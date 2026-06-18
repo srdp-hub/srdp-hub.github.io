@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Mozilla+Headline:wght@400;600;700&amp;family=Mozilla+Text:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/tokens.css">
-<link rel="stylesheet" href="assets/site.css?v=2">
+<link rel="stylesheet" href="assets/site.css?v=3">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -132,6 +132,8 @@
   /* ---------- cases teaser ---------- */
   .cases-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; }
   .cases-grid .card h3 { font-size: 26px; margin: 16px 0 10px; }
+  .cases-grid .card h3.case-logo { margin: 14px 0 12px; }
+  .cases-grid .card h3.case-logo img { display: block; height: 34px; width: auto; max-width: 100%; }
   .cases-grid .card p { margin: 0; font-size: 16.5px; color: var(--ink-70); }
   .cases-grid .card .go { display: inline-block; margin-top: 20px; font-family: var(--font-mono); font-size: 14px; color: var(--blue-deep); }
   .sec-head-row { display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
@@ -367,10 +369,10 @@
     </div>
     <div class="cases-grid" style="margin-top: 48px">
       <a class="card" href="cases.html#sein">
-        <span class="tag"><span lang="nl">Epilepsiezorg</span><span lang="en">Epilepsy care</span></span>
-        <h3>SEIN</h3>
-        <p lang="nl">Een soeverein dataplatform voor zorg en onderzoek, met onderzoeksdata in eigen beheer.</p>
-        <p lang="en">A sovereign data platform for care and research, with research data under SEIN's own control.</p>
+        <span class="tag"><span lang="nl">Epilepsiezorg &amp; slaapgeneeskunde</span><span lang="en">Epilepsy &amp; sleep medicine</span></span>
+        <h3 class="case-logo"><img src="assets/testimonials/SEIN.jpeg" alt="SEIN"></h3>
+        <p lang="nl">Een onafhankelijk dataplatform voor zorg en onderzoek, met onderzoeksdata in eigen beheer.</p>
+        <p lang="en">An independent data platform for care and research, with research data under SEIN's own control.</p>
         <span class="go"><span lang="nl">Lees de case →</span><span lang="en">Read the case →</span></span>
       </a>
       <a class="card" href="cases.html#intrakoop">
@@ -396,7 +398,7 @@
       <a class="btn btn-ghost" href="partners.html"><span lang="nl">Over de partners</span><span lang="en">About the partners</span></a>
     </div>
     <div class="partner-grid" style="margin-top: 48px">
-      <div class="partner-tile"><span class="wordmark">Factful</span></div>
+      <div class="partner-tile"><img src="assets/partners/factful.svg" alt="Factful"></div>
       <div class="partner-tile"><span class="wordmark">@kapitan</span></div>
       <div class="partner-tile"><img src="assets/partners/kundolabs.png" alt="KundoLabs"></div>
       <div class="partner-tile"><img src="assets/partners/timformatie-ink.png" alt="Timformatie"></div>

@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Mozilla+Headline:wght@400;600;700&amp;family=Mozilla+Text:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/tokens.css">
-<link rel="stylesheet" href="assets/site.css?v=2">
+<link rel="stylesheet" href="assets/site.css?v=3">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -34,6 +34,7 @@
   .page-hero { padding-bottom: 64px; }
   .case { padding: 96px 0; border-top: 2px solid var(--ink); scroll-margin-top: 90px; }
   .case-head { display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: start; margin-bottom: 48px; }
+  .case-logo { display: block; height: 46px; width: auto; max-width: 78%; margin-bottom: 20px; }
   .case-head h2 { font-size: clamp(36px, 4.2vw, 54px); margin: 14px 0 12px; }
   .case-head .who { font-size: 18px; color: var(--ink-70); max-width: 56ch; margin: 0; }
   .case-fig {
@@ -62,6 +63,7 @@
     .case-head { grid-template-columns: 1fr; }
     .case-cols { grid-template-columns: 1fr; }
     .case-fig { display: none; }
+    .case-logo { height: 38px; }
   }
 </style>
 </head>
@@ -120,7 +122,8 @@
   <div class="wrap">
     <div class="case-head">
       <div>
-        <span class="tag"><span lang="nl">Epilepsiezorg &amp; onderzoek</span><span lang="en">Epilepsy care &amp; research</span></span>
+        <img class="case-logo" src="assets/testimonials/SEIN.jpeg" alt="SEIN">
+        <span class="tag"><span lang="nl">Epilepsiezorg, slaapgeneeskunde &amp; onderzoek</span><span lang="en">Epilepsy, sleep medicine &amp; research</span></span>
         <h2 lang="nl">SEIN: een dataplatform in eigen beheer.</h2>
         <h2 lang="en">SEIN: a data platform under its own control.</h2>
         <p class="who" lang="nl">SEIN is hét expertisecentrum voor epilepsie en slaapgeneeskunde in Nederland — met klinieken, poliklinieken en een eigen onderzoekstak.</p>
@@ -145,8 +148,8 @@
         <p lang="en">One place where care and research data come together, reusable for new questions, without per-user licence fees and without dependence on a single vendor.</p>
       </div>
     </div>
-    <p class="case-meta" lang="nl">Sector: zorg · Patroon: soeverein lakehouse · Status: in productie</p>
-    <p class="case-meta" lang="en">Sector: healthcare · Pattern: sovereign lakehouse · Status: in production</p>
+    <p class="case-meta" lang="nl">Sector: zorg · Patroon: onafhankelijk lakehouse · Status: in productie</p>
+    <p class="case-meta" lang="en">Sector: healthcare · Pattern: independent lakehouse · Status: in production</p>
   </div>
 </section>
 
