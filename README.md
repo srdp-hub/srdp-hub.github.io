@@ -1,11 +1,17 @@
 # srdphub.com — production site (SRDP identity v1.0)
 
-This folder is the **publish-ready website** for srdphub.com. Upload its
-**contents** to the root of `github.com/srdp-hub/srdphub.com` (branch `main`)
-and enable GitHub Pages (Settings → Pages → Deploy from branch → `main` / root).
-The included `CNAME` file points the Pages site at **srdphub.com** — also add
-the custom domain in the Pages settings and set the DNS records GitHub shows
-there (A/AAAA for apex + optional `www` CNAME).
+This repo **is** the live website. GitHub Pages serves branch `main`, folder `/`,
+on the custom domain **srdphub.com** (`CNAME`; HTTPS enforced, certificate
+renews automatically). **A push to `main` is live within about a minute.**
+
+Plain static HTML/CSS/JS, no build step. Preview locally with
+`python3 -m http.server 8766` in this folder and open http://localhost:8766.
+
+For anything partners care about (profiles, cases, positioning) use a branch
+and a pull request so the other partners can review; typo fixes can go
+straight to `main`.
+
+The older repo `srdp-hub/srdphub.com` is **archived**; don't publish there.
 
 ## What's here
 
@@ -18,7 +24,8 @@ there (A/AAAA for apex + optional `www` CNAME).
 | `join.html` | For professionals (`#consultant`) and MSPs (`#msp`) — quieter, two forms |
 | `404.html` | Not-found page (GitHub Pages picks it up automatically) |
 | `assets/` | tokens.css (design tokens v1.0 — single source of truth), site.css, site.js, logos, partner logos, Mozilla motifs, favicon, og-image |
-| `CNAME` / `.nojekyll` / `robots.txt` / `sitemap.xml` / `llms.txt` | Domain + crawler/GEO files |
+| `CNAME` / `robots.txt` / `sitemap.xml` / `llms.txt` | Domain + crawler/GEO files |
+| `_archive/` | Parked content (DHD PLUGIN case). Not published: Jekyll skips folders starting with `_`. **Do not add `.nojekyll`**, or it goes live. |
 
 ## Before launch — to do
 
@@ -46,7 +53,7 @@ there (A/AAAA for apex + optional `www` CNAME).
 - If real `/en/` routes are ever wanted for SEO, generate them from these pages
   and add `hreflang` links; keep the toggle UX.
 
-## Brand rules (from ../final/ — v1.0)
+## Brand rules (SRDP identity v1.0; tokens in `assets/tokens.css`)
 
 - Fonts: Mozilla Headline (display), Mozilla Text (body), JetBrains Mono (labels).
 - Ink `#161616` on paper `#FBFAF6`; **cyan `#7DEDF6`** is THE accent (surface
