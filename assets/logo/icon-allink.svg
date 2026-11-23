@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 265 433" width="265" height="433" role="img" aria-label="SRDP">
+  <title>SRDP</title>
+  <g fill="none" stroke="#161616">
+    <path stroke-width="25.25" d="M132.62 178.57V432.5"/>
+    <path stroke-width="23.5" d="M50.1 109.11V271.3A59.75 59.75 0 0 0 109.85 331.05H132.62M215.6 49.52V210.6A61.25 61.25 0 0 1 154.35 271.85H132.62"/>
+  </g>
+  <g fill="#161616">
+    <circle cx="50.1" cy="109.11" r="49.46"/>
+    <circle cx="132.49" cy="178.57" r="49.48"/>
+    <circle cx="215.42" cy="49.52" r="49.46"/>
+  </g>
+</svg>
